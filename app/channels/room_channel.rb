@@ -10,14 +10,9 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    puts '--------inspecting----'
+    puts '--------inspecting--------'
     puts data.inspect
-    message = render_message(Message.create content: data['message'],user: data['user'])
-    ActionCable.server.broadcast 'room_channel',{message: message}
+    Message.create content: data['message'],user: data['user']
   end
 
-  private
-  def render_message(message)
-    ApplicationController.renderer.render(partial: 'messages/message',locals: {message: message})
-  end
 end
