@@ -1,0 +1,5 @@
+<% if params['message']['user'].present? %>
+    App.room.speak($('#message_content').val(),$('#message_user').val());
+    $('#message_content').val("");
+
+<% end %>
