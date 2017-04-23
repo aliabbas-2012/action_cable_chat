@@ -9,4 +9,10 @@ Rails.application.routes.draw do
   #web socket cabel in process
 
   # mount ActionCable.server => '/cableq'
+
+  
+  devise_for :users, controllers: {
+    sessions: 'users/sessions' 
+  }
+
 end
