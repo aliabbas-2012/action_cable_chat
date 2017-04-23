@@ -14,7 +14,7 @@ App.room = App.cable.subscriptions.create "RoomChannel",
     @perform 'speak',message: message,user: user
 
   send_message: ()->
-    App.room.speak($('#message_content').val(),$('#message_content').val())
+    App.room.speak($('#message_content').val(),$('#message_user').val())
     $('#message_content').val('');
 
 
