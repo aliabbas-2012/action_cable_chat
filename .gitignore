@@ -55,5 +55,5 @@ bower.json
 
 # Ignore pow environment settings
 .powenv
-
+self
 

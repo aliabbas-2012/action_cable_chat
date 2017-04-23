@@ -10,9 +10,7 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    puts '--------inspecting--------'
-    puts data.inspect
-    Message.create content: data['message'],user: data['user']
+    Message.create content: data['message'],user: self.connection.current_user.email
   end
 
 end
