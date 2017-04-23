@@ -13,3 +13,5 @@
     console.log(App.cable);
 
 }).call(this);
+
+

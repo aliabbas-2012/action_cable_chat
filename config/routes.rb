@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   #web socket cabel in process
 
-  mount ActionCable.server => '/cableq'
+  # mount ActionCable.server => '/cableq'
 end
